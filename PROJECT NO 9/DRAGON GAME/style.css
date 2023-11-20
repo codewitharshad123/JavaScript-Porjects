@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: red;
+    overflow: hidden;
+}
+.gameContainer{
+background-image: url(bg.png);
+background-repeat: no-repeat;
+background-size: 100vw 100vh;
+width: 100%;
+height: 100vh;
+}
+.dino{
+background-image: url(dino.png);
+background-repeat: no-repeat;
+background-size: cover;
+width: 233px;
+height: 114px;
+position: absolute;/*YAA APNA HTML ROOT KAA LAHAZ SAA HILIAA GAA KINO KAA HUM NAA PARENT KOI POSITION NHI DI HII HAA*/
+bottom: 0;
+left: 52px;
+}
+.obstacle{
+    width: 166px;
+    height: 113px;
+    background-image: url(dragon.png);
+    background-size: cover;
+    position: absolute;/*YAA APNA HTML ROOT KAA LAHAZ SAA HILIAA GAA KINO KAA HUM NAA PARENT KOI POSITION NHI DI HII HAA*/
+    bottom: 0;
+    left: 44vw;
+}
+.animatedDino{
+  animation: dino 0.6s linear;
+}
+.obstacleAni{
+    animation: obstacleAni 5s linear infinite;
+}
+.gameOver{
+    visibility: hidden;
+}
+@keyframes dino{
+    0%{
+bottom: 0;
+    }
+    50%{
+bottom: 422PX;
+    }
+    100%{
+bottom: 0;
+    }
+}
+@keyframes obstacleAni{
+0%{
+left: 100vw;
+}
+100%{
+left: -10vw;
+}
+}
